@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lazada AFP Growth Coach — Agent Overview</title>
+<style>
+  @font-face { font-family: 'Instrument'; src: url('InstrumentSans-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'Instrument'; src: url('InstrumentSans-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'JetBrains'; src: url('JetBrainsMono-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'JetBrains'; src: url('JetBrainsMono-Bold.ttf'); font-weight: 700; }
+  @font-face { font-family: 'Jura'; src: url('Jura-Light.ttf'); font-weight: 300; }
+  @font-face { font-family: 'Jura'; src: url('Jura-Medium.ttf'); font-weight: 500; }
+
+  :root {
+    /* Lazada-inspired palette */
+    --laz-orange: #f85606;
+    --laz-orange-light: #ff7337;
+    --laz-orange-bg: #fff5f0;
+    --laz-orange-border: #ffdccc;
+    --laz-deep: #0f146d;
+    --laz-deep-light: #1a237e;
+    --laz-blue: #1976d2;
+    --laz-blue-light: #e3f2fd;
+    --laz-blue-border: #bbdefb;
+    --laz-purple: #7b1fa2;
+    --laz-purple-light: #f3e5f5;
+    --laz-purple-border: #ce93d8;
+    --laz-green: #2e7d32;
+    --laz-green-light: #e8f5e9;
+    --laz-green-border: #a5d6a7;
+    --laz-amber: #f57f17;
+    --laz-amber-light: #fff8e1;
+    --laz-amber-border: #ffe082;
+
+    --bg: #ffffff;
+    --bg-page: #fafbfc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fefefe;
+    --border: #e8eaed;
+    --border-hover: #d0d3d8;
+    --text: #1a1a2e;
+    --text-secondary: #3d3d5c;
+    --text-muted: #6b7280;
+    --text-dim: #9ca3af;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Instrument', system-ui, sans-serif;
+    background: var(--bg-page);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BANNER ── */
+  .top-banner {
+    background: linear-gradient(135deg, var(--laz-orange), var(--laz-orange-light));
+    padding: 6px 0;
+    text-align: center;
+  }
+  .top-banner span {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0 40px;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  .hero-text { flex: 1; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--laz-orange-bg);
+    border: 1px solid var(--laz-orange-border);
+    border-radius: 99px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+  }
+  .hero-badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--laz-orange);
+  }
+  .hero-badge span {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--laz-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .hero h1 {
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    letter-spacing: -1px;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+  .hero h1 strong {
+    font-weight: 500;
+    color: var(--laz-orange);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .hero-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-tag {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg-page);
+  }
+  .hero-tag.t-orange { border-color: var(--laz-orange-border); color: var(--laz-orange); background: var(--laz-orange-bg); }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .demo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--laz-orange), var(--laz-orange-light));
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(248,86,6,0.24);
+    transition: all 0.2s ease;
+  }
+  .demo-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(248,86,6,0.30);
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    width: 360px;
+    flex-shrink: 0;
+  }
+  .hero-phone {
+    width: 250px;
+    height: 390px;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 28px;
+    margin: 0 auto;
+    padding: 20px 14px 14px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-phone-notch {
+    width: 80px; height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin: 0 auto 14px;
+  }
+  .hero-phone-msg {
+    background: var(--laz-orange-bg);
+    border: 1px solid var(--laz-orange-border);
+    border-radius: 12px 12px 12px 2px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    animation: phoneMsg 0.5s ease forwards;
+    opacity: 0;
+  }
+  .hero-phone-msg:nth-child(2) { animation-delay: 0.3s; }
+  .hero-phone-msg:nth-child(3) { animation-delay: 0.6s; }
+  .hero-phone-msg:nth-child(4) {
+    animation-delay: 0.9s;
+    background: var(--laz-blue-light);
+    border-color: var(--laz-blue-border);
+    border-radius: 12px 12px 2px 12px;
+    margin-left: 24px;
+  }
+  .hero-phone-msg:nth-child(5) { animation-delay: 1.2s; }
+  .hero-phone-msg em { color: var(--laz-orange); font-style: normal; font-weight: 700; }
+  @keyframes phoneMsg { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 48px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  .section.visible { opacity: 1; transform: translateY(0); }
+  .section + .section { border-top: 1px solid var(--border); }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .section-num {
+    font-family: 'JetBrains', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    background: var(--laz-orange);
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .section-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .section-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-left: auto;
+  }
+
+
+  /* ── BACKGROUND STORY ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .story-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: var(--shadow-sm);
+  }
+  .story-card.highlight {
+    background: linear-gradient(135deg, var(--laz-orange-bg), #ffffff);
+    border-color: var(--laz-orange-border);
+  }
+  .story-eyebrow {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--laz-orange);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .story-title {
+    font-family: 'Jura', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .story-text {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .story-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .story-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .story-item strong {
+    color: var(--text);
+  }
+  .story-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--laz-orange);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .persona-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .persona-name {
+    font-family: 'Jura', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--laz-orange);
+  }
+  .persona-role {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-top: -8px;
+  }
+  .persona-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .persona-pill {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    padding: 7px 11px;
+    border-radius: 99px;
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .value-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .value-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .value-num {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    color: var(--laz-orange);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .value-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 5px;
+  }
+  .value-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── CAMPAIGN HERO CARD ── */
+  .campaign-card {
+    background: linear-gradient(135deg, var(--laz-orange), #ff6f20, var(--laz-orange-light));
+    border-radius: 16px;
+    padding: 32px 36px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    box-shadow: 0 8px 32px rgba(248,86,6,0.2);
+    margin-bottom: 32px;
+  }
+  .campaign-info { flex: 1; }
+  .campaign-eyebrow {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+  .campaign-name {
+    font-family: 'Jura', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .campaign-date {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 16px;
+  }
+  .campaign-mechanism {
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.65;
+    max-width: 500px;
+  }
+  .campaign-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .campaign-stat {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 130px;
+  }
+  .campaign-stat-val {
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .campaign-stat-label {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    opacity: 0.8;
+    text-transform: uppercase;
+  }
+
+  /* ── CAPABILITY CARDS ── */
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .cap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .cap-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 0 0 14px 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .cap-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .cap-card:hover::after { opacity: 1; }
+  .cap-card:nth-child(1)::after { background: var(--laz-orange); }
+  .cap-card:nth-child(2)::after { background: var(--laz-purple); }
+  .cap-card:nth-child(3)::after { background: var(--laz-blue); }
+  .cap-card:nth-child(4)::after { background: var(--laz-amber); }
+  .cap-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 22px;
+  }
+  .cap-icon-orange { background: var(--laz-orange-bg); border: 1px solid var(--laz-orange-border); }
+  .cap-icon-purple { background: var(--laz-purple-light); border: 1px solid var(--laz-purple-border); }
+  .cap-icon-blue { background: var(--laz-blue-light); border: 1px solid var(--laz-blue-border); }
+  .cap-icon-amber { background: var(--laz-amber-light); border: 1px solid var(--laz-amber-border); }
+  .cap-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .cap-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .cap-vs {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .cap-card:nth-child(1) .cap-vs { background: var(--laz-orange-bg); color: var(--laz-orange); }
+  .cap-card:nth-child(2) .cap-vs { background: var(--laz-purple-light); color: var(--laz-purple); }
+  .cap-card:nth-child(3) .cap-vs { background: var(--laz-blue-light); color: var(--laz-blue); }
+  .cap-card:nth-child(4) .cap-vs { background: var(--laz-amber-light); color: var(--laz-amber); }
+  .cap-card:hover .cap-vs { opacity: 1; }
+
+  /* ── FLOW ── */
+  .flow-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 12px 0 8px;
+    position: relative;
+  }
+  .flow-connector {
+    position: absolute;
+    top: 36px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--laz-orange), var(--laz-blue), var(--laz-purple), var(--laz-green));
+    opacity: 0.2;
+    border-radius: 1px;
+  }
+  .flow-node {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .flow-node:hover { transform: scale(1.06); }
+  .flow-ring {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s;
+  }
+  .flow-node:hover .flow-ring { box-shadow: var(--shadow-md); }
+  .flow-ring-orange { background: var(--laz-orange); }
+  .flow-ring-blue { background: var(--laz-blue); }
+  .flow-ring-purple { background: var(--laz-purple); }
+  .flow-ring-green { background: var(--laz-green); }
+  .flow-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.25;
+  }
+  .flow-hint {
+    font-family: 'JetBrains', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 3px;
+    text-align: center;
+  }
+  .flow-badge {
+    font-family: 'JetBrains', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+  .badge-llm { background: var(--laz-purple-light); color: var(--laz-purple); border: 1px solid var(--laz-purple-border); }
+  .badge-rag { background: var(--laz-green-light); color: var(--laz-green); border: 1px solid var(--laz-green-border); }
+
+  .flow-detail {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-top: 16px;
+    display: none;
+    box-shadow: var(--shadow-sm);
+    animation: fadeIn 0.3s ease;
+  }
+  .flow-detail.active { display: block; }
+  .flow-detail-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .flow-detail-body {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .flow-detail-body strong { color: var(--laz-orange); font-weight: 700; }
+  .flow-note {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .flow-note-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--laz-orange); opacity: 0.5; }
+
+  /* ── TIER ── */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .tier-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .tier-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .tier-indicator {
+    width: 100%; height: 3px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .tier-label {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 2px;
+  }
+  .tier-name {
+    font-family: 'Jura', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .tier-cond {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .tier-tone-tag {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+  }
+  .tier-focus {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    line-height: 1.45;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.35s ease;
+  }
+  .tier-card:hover .tier-focus { max-height: 80px; opacity: 1; }
+
+  /* Click-to-order diagnostic */
+  .diag-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .diag-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .diag-label {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+  .diag-val {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* ── VARIABLES ── */
+  .var-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .var-group {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .var-group-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .var-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .var-group-title { font-size: 14px; font-weight: 700; color: var(--text); }
+  .var-count { font-family: 'JetBrains', monospace; font-size: 11px; color: var(--text-dim); margin-left: auto; }
+  .var-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .var-chip {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: default;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .var-chip:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+  .vc-orange { background: var(--laz-orange-bg); color: var(--laz-orange); border: 1px solid var(--laz-orange-border); }
+  .vc-purple { background: var(--laz-purple-light); color: var(--laz-purple); border: 1px solid var(--laz-purple-border); }
+  .vc-green { background: var(--laz-green-light); color: var(--laz-green); border: 1px solid var(--laz-green-border); }
+  .var-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-family: 'Instrument', sans-serif;
+    font-size: 12px;
+    color: white;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+  .var-chip:hover .var-tooltip { opacity: 1; }
+  .var-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--text);
+  }
+
+  /* ── ACW ── */
+  .acw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .acw-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+  }
+  .acw-card:hover { box-shadow: var(--shadow-md); }
+  .acw-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .acw-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .acw-tag {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    padding: 6px 11px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .at-orange { background: var(--laz-orange-bg); color: var(--laz-orange); border: 1px solid var(--laz-orange-border); }
+  .at-purple { background: var(--laz-purple-light); color: var(--laz-purple); border: 1px solid var(--laz-purple-border); }
+  .at-amber { background: var(--laz-amber-light); color: #b45309; border: 1px solid var(--laz-amber-border); }
+  .acw-llm-badge {
+    font-family: 'JetBrains', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: var(--laz-purple-light);
+    color: var(--laz-purple);
+    border: 1px solid var(--laz-purple-border);
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* ── SAFETY ── */
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .safety-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .safety-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .safety-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .safety-badge {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .safety-badge:hover { border-color: var(--laz-orange-border); background: var(--laz-orange-bg); color: var(--laz-orange); }
+  .closing-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 8px;
+    color: white;
+    cursor: default;
+    transition: transform 0.2s;
+  }
+  .closing-badge:hover { transform: scale(1.04); }
+
+  /* ── DIALOG ── */
+  .tab-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .tab-btn {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { border-color: var(--border-hover); color: var(--text); }
+  .tab-btn.active { border-color: var(--laz-orange); color: var(--laz-orange); background: var(--laz-orange-bg); }
+
+  .dialog-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    max-height: 560px;
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm);
+  }
+  .dialog-container::-webkit-scrollbar { width: 4px; }
+  .dialog-container::-webkit-scrollbar-track { background: transparent; }
+  .dialog-container::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 2px; }
+  .dialog-turn {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: dialogIn 0.4s ease forwards;
+  }
+  .dialog-turn:nth-child(1) { animation-delay: 0.1s; }
+  .dialog-turn:nth-child(2) { animation-delay: 0.3s; }
+  .dialog-turn:nth-child(3) { animation-delay: 0.5s; }
+  .dialog-turn:nth-child(4) { animation-delay: 0.7s; }
+  .dialog-turn:nth-child(5) { animation-delay: 0.9s; }
+  .dialog-turn:nth-child(6) { animation-delay: 1.1s; }
+  .dialog-turn:nth-child(7) { animation-delay: 1.3s; }
+  .dialog-turn:nth-child(8) { animation-delay: 1.5s; }
+  .dialog-turn:nth-child(9) { animation-delay: 1.7s; }
+  .dialog-turn:nth-child(10) { animation-delay: 1.9s; }
+  .dialog-avatar {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .avatar-bot { background: var(--laz-orange); }
+  .avatar-partner { background: var(--laz-blue); }
+  .dialog-content { flex: 1; }
+  .dialog-speaker {
+    font-family: 'JetBrains', monospace;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .speaker-bot { color: var(--laz-orange); }
+  .speaker-partner { color: var(--laz-blue); }
+  .dialog-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 11px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-page);
+  }
+  .dialog-text em { color: var(--laz-orange); font-style: normal; font-weight: 700; }
+  .dialog-stage {
+    font-family: 'JetBrains', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 5px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 48px 0 28px;
+    border-top: 1px solid var(--border);
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .footer-logo-dot {
+    width: 10px; height: 10px;
+    border-radius: 3px;
+    background: var(--laz-orange);
+  }
+  .footer-logo span {
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  .footer-text {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes dialogIn { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
+
+
+  /* ── ACCESS CODE GATE ── */
+  body.locked {
+    overflow: hidden;
+  }
+  .access-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffffff 55%, #e3f2fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .access-card {
+    width: min(440px, 100%);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-lg);
+    padding: 34px;
+    text-align: center;
+  }
+  .access-kicker {
+    font-family: 'JetBrains', monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--laz-orange);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .access-card h2 {
+    font-family: 'Jura', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .access-card p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+  }
+  .access-input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px 16px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    outline: none;
+    margin-bottom: 12px;
+  }
+  .access-input:focus {
+    border-color: var(--laz-orange);
+    box-shadow: 0 0 0 4px rgba(248,86,6,0.10);
+  }
+  .access-submit {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 15px 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--laz-orange), var(--laz-orange-light));
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .access-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(248,86,6,0.24);
+  }
+  .access-error {
+    display: none;
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 12px;
+    font-weight: 700;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { flex-direction: column; text-align: center; }
+    .hero-visual { width: 100%; }
+    .hero-tags { justify-content: center; }
+    .cap-grid, .tier-grid { grid-template-columns: repeat(2, 1fr); }
+    .var-grid, .acw-grid { grid-template-columns: 1fr; }
+    .safety-grid { grid-template-columns: 1fr; }
+    .campaign-card { flex-direction: column; text-align: center; }
+    .flow-track { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .flow-connector { display: none; }
+    .diag-grid { grid-template-columns: 1fr; }
+
+    .story-grid { grid-template-columns: 1fr; }
+    .value-strip { grid-template-columns: repeat(2, 1fr); }
+
+  }
+</style>
+</head>
+<body class="locked">
+
+<!-- ACCESS CODE GATE -->
+<div class="access-gate" id="access-gate">
+  <div class="access-card">
+    <div class="access-kicker">Lazada Demo Access</div>
+    <h2>Enter Access Code</h2>
+    <p>This demo is shared for internal preview.</p>
+    <input class="access-input" id="access-code" type="password" placeholder="Access code" autocomplete="off" />
+    <button class="access-submit" onclick="checkAccessCode()">Unlock Demo</button>
+    <div class="access-error" id="access-error">Incorrect code. Please try again.</div>
+  </div>
+</div>
+
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <span>Wizlynn LLM Voice Agent · Demo Preview</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>Lazada Affiliates Programme</span>
+      </div>
+      <h1>Affiliate <strong>Growth Coach</strong></h1>
+      <p class="hero-sub">Personalized campaign promotion and growth coaching — powered by runtime behavioral data and open-ended conversation intelligence.</p>
+      <div class="hero-tags">
+        <span class="hero-tag t-orange">Outbound Voice</span>
+        <span class="hero-tag">Single Node</span>
+        <span class="hero-tag">English</span>
+        <span class="hero-tag">GPT-4.1</span>
+        <span class="hero-tag">40+ FAQ RAG</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wizlynn-sg.wiz.ai/guest/iln26lr3" target="_blank" rel="noopener noreferrer" class="demo-button">▶ Launch Live Demo</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-phone">
+        <div class="hero-phone-notch"></div>
+        <div class="hero-phone-msg">Hello! This is <em>Ella</em> from the Lazada Affiliates program.</div>
+        <div class="hero-phone-msg">You've generated <em>8 orders</em> and <em>320 clicks</em> this month — solid momentum!</div>
+        <div class="hero-phone-msg">The <em>Mega Sales Order Ladder</em> is live — you're close to the first tier.</div>
+        <div class="hero-phone-msg">Sure, I'd love to join!</div>
+        <div class="hero-phone-msg">What's the biggest challenge you face in growing your earnings?</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 00 BACKGROUND STORY -->
+  <div class="section" id="sec-story">
+    <div class="section-header">
+      <div class="section-num">00</div>
+      <span class="section-label">Agent Background Story</span>
+      <span class="section-desc">What the demo is showing</span>
+    </div>
+    <div class="story-grid">
+      <div class="story-card highlight">
+        <div class="story-eyebrow">What is this agent?</div>
+        <div class="story-title">A personalized outbound growth coach for Lazada affiliate partners</div>
+        <p class="story-text">This demo showcases an LLM-powered voice agent for the Lazada Affiliates Programme. The agent calls affiliate partners, verifies identity, promotes the active campaign, and turns recent partner behavior into a more relevant coaching conversation.</p>
+        <p class="story-text">Instead of using one static campaign script, the agent adapts its pitch and advice based on each partner's orders, clicks, active days, self-reported challenges, and promotion channels.</p>
+      </div>
+      <div class="story-card persona-card">
+        <div class="story-eyebrow">Agent Persona</div>
+        <div class="persona-name">Ella</div>
+        <div class="persona-role">Warm growth advisor from the Lazada Affiliates Programme</div>
+        <p class="story-text">Ella is designed to sound like a helpful programme team member — friendly, encouraging, non-pushy, and focused on helping partners succeed.</p>
+        <div class="persona-pill-row">
+          <span class="persona-pill">Helpful</span>
+          <span class="persona-pill">Consultative</span>
+          <span class="persona-pill">Data-aware</span>
+          <span class="persona-pill">Non-salesy</span>
+        </div>
+      </div>
+    </div>
+    <div class="value-strip">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <div class="value-title">Identity-first</div>
+        <div class="value-desc">Performance data is only mentioned after confirming the correct partner.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <div class="value-title">Tier-adaptive</div>
+        <div class="value-desc">Newcomers get encouragement; established partners get consultative scaling advice.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <div class="value-title">Open-ended</div>
+        <div class="value-desc">The agent can parse multi-part answers about time, products, platforms, and low views.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">04</div>
+        <div class="value-title">Actionable ACW</div>
+        <div class="value-desc">The call ends with structured tags for campaign result, partner challenge, channels, and tips.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMPAIGN CARD -->
+  <div class="section" id="sec-campaign" style="padding-bottom: 16px;">
+    <div class="campaign-card">
+      <div class="campaign-info">
+        <div class="campaign-eyebrow">Current Campaign</div>
+        <div class="campaign-name">{{CAMPAIGN_NAME}}</div>
+        <div class="campaign-date">{{CAMPAIGN_DATE}}</div>
+        <div class="campaign-mechanism">{{CAMPAIGN_MECHANISM}} — the agent pitches this campaign with tier-specific framing, adapting the hook based on each partner's order history and activity level.</div>
+      </div>
+      <div class="campaign-visual">
+        <div class="campaign-stat">
+          <div class="campaign-stat-val">12</div>
+          <div class="campaign-stat-label">Variables</div>
+        </div>
+        <div class="campaign-stat">
+          <div class="campaign-stat-val">4</div>
+          <div class="campaign-stat-label">Partner Tiers</div>
+        </div>
+        <div class="campaign-stat">
+          <div class="campaign-stat-val">7</div>
+          <div class="campaign-stat-label">Conv. Stages</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 CAPABILITIES -->
+  <div class="section" id="sec-cap">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <span class="section-label">LLM Capabilities</span>
+      <span class="section-desc">What LLM enables vs traditional NLP</span>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-icon cap-icon-orange">🎯</div>
+        <div class="cap-title">Personalized Pitch</div>
+        <div class="cap-desc">Adapts campaign framing based on partner's order count, click volume, and active days at runtime</div>
+        <div class="cap-vs">NLP: same script for all</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon cap-icon-purple">🎙️</div>
+        <div class="cap-title">Open Questions</div>
+        <div class="cap-desc">Parses complex multi-part answers and remembers details across conversation turns</div>
+        <div class="cap-vs">NLP: cannot parse free-form</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon cap-icon-blue">💡</div>
+        <div class="cap-title">Contextual Tips</div>
+        <div class="cap-desc">Growth advice combines behavioral data with the partner's own words for true personalization</div>
+        <div class="cap-vs">NLP: static scripted tips</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon cap-icon-amber">📋</div>
+        <div class="cap-title">Structured ACW</div>
+        <div class="cap-desc">Extracts challenges, channels, and content types from free-form voice into structured tags</div>
+        <div class="cap-vs">NLP: no extraction ability</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 FLOW -->
+  <div class="section" id="sec-flow">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <span class="section-label">Conversation Flow</span>
+      <span class="section-desc">Click any stage for details</span>
+    </div>
+    <div class="flow-track">
+      <div class="flow-connector"></div>
+      <div class="flow-node" onclick="showFlowDetail(0)">
+        <div class="flow-ring flow-ring-orange">1</div>
+        <div class="flow-name">Identity</div>
+        <div class="flow-hint">verify partner</div>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(1)">
+        <div class="flow-ring flow-ring-orange">2</div>
+        <div class="flow-name">Status</div>
+        <div class="flow-hint">tier-adapted</div>
+        <span class="flow-badge badge-llm">LLM</span>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(2)">
+        <div class="flow-ring flow-ring-orange">3</div>
+        <div class="flow-name">Campaign</div>
+        <div class="flow-hint">personalized</div>
+        <span class="flow-badge badge-llm">LLM</span>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(3)">
+        <div class="flow-ring flow-ring-purple">4a</div>
+        <div class="flow-name">Challenges</div>
+        <div class="flow-hint">open question</div>
+        <span class="flow-badge badge-llm">LLM</span>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(4)">
+        <div class="flow-ring flow-ring-purple">4b</div>
+        <div class="flow-name">Content</div>
+        <div class="flow-hint">cross-turn</div>
+        <span class="flow-badge badge-llm">LLM</span>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(5)">
+        <div class="flow-ring flow-ring-blue">5</div>
+        <div class="flow-name">Growth Tips</div>
+        <div class="flow-hint">data + voice</div>
+        <span class="flow-badge badge-llm">LLM</span>
+      </div>
+      <div class="flow-node" onclick="showFlowDetail(6)">
+        <div class="flow-ring flow-ring-green">6</div>
+        <div class="flow-name">Closing</div>
+        <div class="flow-hint">5 outcomes</div>
+      </div>
+    </div>
+    <div class="flow-detail" id="flow-detail"></div>
+    <div class="flow-note">
+      <span class="flow-note-dot"></span>
+      <span>FAQ via KB RAG available at every stage</span>
+      <span class="flow-note-dot"></span>
+      <span>EC Global Nodes can interrupt at any turn</span>
+    </div>
+  </div>
+
+  <!-- 03 TIERING -->
+  <div class="section" id="sec-tier">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <span class="section-label">Dynamic Partner Tiering</span>
+      <span class="section-desc">Runtime classification from injected variables</span>
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-indicator" style="background:linear-gradient(90deg,#9ca3af,#d1d5db);"></div>
+        <div class="tier-label">Tier 1</div>
+        <div class="tier-name">Newcomer</div>
+        <div class="tier-cond">0 orders · ≤ 7 active days</div>
+        <span class="tier-tone-tag" style="background:#f3f4f6; color:#6b7280; border:1px solid #d1d5db;">Encouraging</span>
+        <div class="tier-focus">Focus: Getting started, generating first order, basic link sharing</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-indicator" style="background:linear-gradient(90deg,#2563eb,#60a5fa);"></div>
+        <div class="tier-label">Tier 2</div>
+        <div class="tier-name">Emerging</div>
+        <div class="tier-cond">1–10 orders or active with 0</div>
+        <span class="tier-tone-tag" style="background:var(--laz-blue-light); color:var(--laz-blue); border:1px solid var(--laz-blue-border);">Supportive</span>
+        <div class="tier-focus">Focus: Consistency, product selection, leveraging campaign bonuses</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-indicator" style="background:linear-gradient(90deg,#7b1fa2,#ce93d8);"></div>
+        <div class="tier-label">Tier 3</div>
+        <div class="tier-name">Growing</div>
+        <div class="tier-cond">11–30 orders</div>
+        <span class="tier-tone-tag" style="background:var(--laz-purple-light); color:var(--laz-purple); border:1px solid var(--laz-purple-border);">Peer-to-peer</span>
+        <div class="tier-focus">Focus: Conversion optimization, content strategy, partner brands</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-indicator" style="background:linear-gradient(90deg,#2e7d32,#66bb6a);"></div>
+        <div class="tier-label">Tier 4</div>
+        <div class="tier-name">Established</div>
+        <div class="tier-cond">> 30 orders</div>
+        <span class="tier-tone-tag" style="background:var(--laz-green-light); color:var(--laz-green); border:1px solid var(--laz-green-border);">Consultative</span>
+        <div class="tier-focus">Focus: Scaling, ads mentorship, advanced programs</div>
+      </div>
+    </div>
+    <div class="diag-grid">
+      <div class="diag-card">
+        <div class="diag-label">HIGH CLICKS · LOW ORDERS</div>
+        <div class="diag-val">Partner drives traffic but struggles to convert → Advise on product selection, timing posts around sales events</div>
+      </div>
+      <div class="diag-card">
+        <div class="diag-label">LOW CLICKS · SOME ORDERS</div>
+        <div class="diag-val">Small but loyal audience → Advise on expanding reach, trying short video content on more platforms</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 VARIABLES -->
+  <div class="section" id="sec-var">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <span class="section-label">Variable Injection</span>
+      <span class="section-desc">12 runtime variables · hover for details</span>
+    </div>
+    <div class="var-grid">
+      <div class="var-group">
+        <div class="var-group-header">
+          <span class="var-dot" style="background:var(--laz-orange);"></span>
+          <span class="var-group-title">Campaign</span>
+          <span class="var-count">3 vars</span>
+        </div>
+        <div class="var-chips">
+          <span class="var-chip vc-orange">CAMPAIGN_NAME<span class="var-tooltip">e.g. "Mega Sales Order Ladder"</span></span>
+          <span class="var-chip vc-orange">CAMPAIGN_MECHANISM<span class="var-tooltip">How the campaign works (rules/tiers)</span></span>
+          <span class="var-chip vc-orange">CAMPAIGN_DATE<span class="var-tooltip">e.g. "June 1 to 15"</span></span>
+        </div>
+      </div>
+      <div class="var-group">
+        <div class="var-group-header">
+          <span class="var-dot" style="background:var(--laz-purple);"></span>
+          <span class="var-group-title">Partner Behavior</span>
+          <span class="var-count">3 vars</span>
+        </div>
+        <div class="var-chips">
+          <span class="var-chip vc-purple">HISTORICAL_ORDER_QTY<span class="var-tooltip">Orders in last 30 days → drives tier</span></span>
+          <span class="var-chip vc-purple">HISTORICAL_CLICK<span class="var-tooltip">Link clicks in last 30 days</span></span>
+          <span class="var-chip vc-purple">ACTIVE_DAYS<span class="var-tooltip">Days active (posted/engaged) in 30 days</span></span>
+        </div>
+      </div>
+      <div class="var-group">
+        <div class="var-group-header">
+          <span class="var-dot" style="background:var(--laz-green);"></span>
+          <span class="var-group-title">Identity & Context</span>
+          <span class="var-count">6 vars</span>
+        </div>
+        <div class="var-chips">
+          <span class="var-chip vc-green">PARTNER_NAME<span class="var-tooltip">Full name for identity verification</span></span>
+          <span class="var-chip vc-green">PARTNER_FIRST_NAME<span class="var-tooltip">First name for warm address</span></span>
+          <span class="var-chip vc-green">BOT_NAME<span class="var-tooltip">Agent persona name (default: Ella)</span></span>
+          <span class="var-chip vc-green">GREETING<span class="var-tooltip">Time-based: morning / afternoon / evening</span></span>
+          <span class="var-chip vc-green">SUPPORT_CHANNEL<span class="var-tooltip">Redirect target for account issues</span></span>
+          <span class="var-chip vc-green">SOCIAL_CHANNEL<span class="var-tooltip">Community group (optional)</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 ACW -->
+  <div class="section" id="sec-acw">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <span class="section-label">After Call Work — Data Capture</span>
+      <span class="section-desc">12 structured tags per call</span>
+    </div>
+    <div class="acw-grid">
+      <div class="acw-card">
+        <div class="acw-card-title"><span class="acw-dot" style="background:var(--laz-orange);"></span> Call Disposition</div>
+        <div class="acw-tag at-orange">call_status</div>
+        <div class="acw-tag at-orange">campaign_result</div>
+        <div class="acw-tag at-orange">partner_tier</div>
+        <div class="acw-tag at-orange">last_stage</div>
+      </div>
+      <div class="acw-card">
+        <div class="acw-card-title"><span class="acw-dot" style="background:var(--laz-purple);"></span> LLM-Extracted Insights</div>
+        <div class="acw-tag at-purple">partner_challenge</div>
+        <div class="acw-tag at-purple">promotion_channels</div>
+        <div class="acw-tag at-purple">content_type</div>
+        <div class="acw-tag at-purple">growth_tips_given</div>
+        <div class="acw-llm-badge">LLM EXCLUSIVE</div>
+      </div>
+      <div class="acw-card">
+        <div class="acw-card-title"><span class="acw-dot" style="background:var(--laz-amber);"></span> Quality Metrics</div>
+        <div class="acw-tag at-amber">call_resolution</div>
+        <div class="acw-tag at-amber">csat (1–5)</div>
+        <div class="acw-tag at-amber">questions_asked</div>
+        <div class="acw-tag at-amber">summary</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 SAFETY -->
+  <div class="section" id="sec-safety">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <span class="section-label">Safety & Exit Handling</span>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <div class="safety-title">EC Global Nodes</div>
+        <div class="safety-items">
+          <span class="safety-badge">EC1 · Wrong Number</span>
+          <span class="safety-badge">EC2 · Account Issue</span>
+          <span class="safety-badge">EC3 · Voicemail</span>
+          <span class="safety-badge">EC4 · DNC</span>
+          <span class="safety-badge">EC5 · Busy</span>
+        </div>
+      </div>
+      <div class="safety-card">
+        <div class="safety-title">Closing Outcomes</div>
+        <div class="safety-items">
+          <span class="closing-badge" style="background:var(--laz-green);">A · Registered</span>
+          <span class="closing-badge" style="background:var(--laz-blue);">B · Tips Only</span>
+          <span class="closing-badge" style="background:#9ca3af;">C · Unclassified</span>
+          <span class="closing-badge" style="background:#ef4444;">D · Declined</span>
+          <span class="closing-badge" style="background:var(--laz-amber);">E · Redirected</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 SAMPLE DIALOG -->
+  <div class="section" id="sec-dialog">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <span class="section-label">Sample Conversation</span>
+      <span class="section-desc">See how the agent adapts per tier</span>
+    </div>
+    <div class="hero-actions" style="margin: -4px 0 18px;">
+      <a href="https://wizlynn-sg.wiz.ai/guest/iln26lr3" target="_blank" rel="noopener noreferrer" class="demo-button">▶ Launch Voice Test Link</a>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="showDialog('emerging')">Emerging Partner</button>
+      <button class="tab-btn" onclick="showDialog('established')">Established Partner</button>
+    </div>
+    <div class="dialog-container" id="dialog-emerging">
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Hello, good afternoon. This is Ella from the Lazada Affiliates program. Am I speaking with Sarah Johnson?</div><div class="dialog-stage">STAGE 1 — IDENTITY</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">S</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Sarah · Partner</div><div class="dialog-text">Yes, this is Sarah.</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Great to connect with you, Sarah! I can see you've generated <em>8 orders</em> and received <em>320 clicks</em> over the past month, with <em>5 active days</em>. That's solid momentum — and I think there's a great opportunity to take it further.</div><div class="dialog-stage">STAGE 2 — STATUS (Tier: Emerging · personalized data reference)</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">We're running the <em>Mega Sales Order Ladder</em> from June 1 to 15. Generate orders to hit bonus tiers — 10 orders earns a bonus, up to 100 orders for the top reward. Based on your recent 8 orders, <em>you're already close to that first tier</em>. Would you like to join?</div><div class="dialog-stage">STAGE 3 — CAMPAIGN PITCH (tier-specific hook: "close to first tier")</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">S</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Sarah · Partner</div><div class="dialog-text">Sure, I'll give it a try! How do I register?</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">You can register directly in the Lazada App — go to the Affiliates page and look for the Mega Sales Order Ladder banner, then tap Join. By the way, Sarah, I'd love to understand — <em>what's the biggest challenge you face right now in growing your affiliate earnings?</em></div><div class="dialog-stage">STAGE 4a — OPEN QUESTION: CHALLENGES</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">S</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Sarah · Partner</div><div class="dialog-text">Hmm, I think the biggest thing is I don't really know which products to promote. And I've been trying TikTok but my videos don't get many views. Also time — I'm pretty busy with my other work.</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">I hear you — balancing time with affiliate work is a common challenge. <em>You mentioned you're using TikTok</em> — do you also post on other platforms, or is TikTok your main one?</div><div class="dialog-stage">STAGE 4b — CONTENT STRATEGY (cross-turn memory: remembered "TikTok" from 4a)</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">S</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Sarah · Partner</div><div class="dialog-text">Mostly TikTok and sometimes I share links on my Facebook. That's about it.</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Two quick tips for you, Sarah. First, <em>since product selection is your main challenge</em>, during this campaign check the trending products section on the Affiliates page — those items already have high buyer demand, so they convert better. Second, <em>for your TikTok</em>, try using trending sounds and hashtags — even 15-second clips work well for product recommendations.</div><div class="dialog-stage">STAGE 5 — GROWTH TIPS (combines: behavioral data + "product selection" challenge + "TikTok" platform)</div></div></div>
+    </div>
+    <div class="dialog-container" id="dialog-established" style="display:none;">
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Hello, good morning. This is Ella from the Lazada Affiliates program. Am I speaking with Jessica Wang?</div><div class="dialog-stage">STAGE 1 — IDENTITY</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">J</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Jessica · Partner</div><div class="dialog-text">Yes, speaking.</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Your numbers are impressive, Jessica — <em>52 orders</em> and <em>1,200 clicks</em> with <em>22 active days</em> this past month. I wanted to personally reach out because our current campaign has great earning potential for experienced affiliates like you.</div><div class="dialog-stage">STAGE 2 — STATUS (Tier: Established · consultative tone, acknowledges expertise)</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">The <em>Mega Sales Order Ladder</em> runs June 1 to 15. With your current momentum, <em>you're well positioned to aim for the higher bonus tiers right away</em>. Interested?</div><div class="dialog-stage">STAGE 3 — CAMPAIGN PITCH (Established hook: "higher tiers")</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">J</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Jessica · Partner</div><div class="dialog-text">I'm already doing well with regular commission. What else can you offer?</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">Great question. The order ladder bonuses stack on top of your regular commission — so it's purely additional earnings. What's the biggest challenge you're looking to solve at this stage of your affiliate journey?</div><div class="dialog-stage">STAGE 4a — OPEN QUESTION (natural transition from objection handling)</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-partner">J</div><div class="dialog-content"><div class="dialog-speaker speaker-partner">Jessica · Partner</div><div class="dialog-text">Honestly, I want to scale but I feel like I've hit a ceiling. My audience size hasn't grown much lately even though I'm posting a lot on Instagram.</div></div></div>
+      <div class="dialog-turn"><div class="dialog-avatar avatar-bot">E</div><div class="dialog-content"><div class="dialog-speaker speaker-bot">Ella · Bot</div><div class="dialog-text">That's a common plateau at your level. <em>Since you're primarily on Instagram and looking to break through</em>, two things worth exploring. First, our <em>partner brands</em> give you double commission — up to 40 percent per order — so you earn more without needing more audience. Second, <em>with your order volume, you may qualify for the Ads Boosting Mentorship Program</em> — it teaches experienced affiliates how to use targeted ads to expand reach.</div><div class="dialog-stage">STAGE 5 — GROWTH TIPS (Established: partner brands + mentorship · references "Instagram" + "ceiling")</div></div></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">
+      <div class="footer-logo-dot"></div>
+      <span>Wiz AI · Wizlynn Platform</span>
+    </div>
+    <div class="footer-text">Lazada Affiliate Partner Programme · LLM Voice Agent Demo</div>
+  </div>
+
+</div>
+
+<script>
+
+  // Access code gate
+  const DEMO_ACCESS_CODE = 'LZD2026';
+  function unlockDemo() {
+    const gate = document.getElementById('access-gate');
+    if (gate) gate.style.display = 'none';
+    document.body.classList.remove('locked');
+    sessionStorage.setItem('lazadaDemoUnlocked', 'true');
+  }
+  function checkAccessCode() {
+    const input = document.getElementById('access-code');
+    const error = document.getElementById('access-error');
+    if (input && input.value.trim() === DEMO_ACCESS_CODE) {
+      unlockDemo();
+    } else if (error) {
+      error.style.display = 'block';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (sessionStorage.getItem('lazadaDemoUnlocked') === 'true') {
+      unlockDemo();
+    }
+    const input = document.getElementById('access-code');
+    if (input) {
+      input.focus();
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') checkAccessCode();
+      });
+    }
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.section').forEach(s => observer.observe(s));
+
+  // Flow detail
+  const flowData = [
+    { title: 'Stage 1 — Identity Confirmation', body: 'The greeting asks: "Am I speaking with <strong>{{PARTNER_NAME}}</strong>?" The agent confirms identity before revealing any performance data. Handles scam concerns and "who is this?" questions via KB. Pre-identity rule: no data disclosure until confirmed.' },
+    { title: 'Stage 2 — Status Acknowledgment', body: 'Agent references the partner\'s <strong>{{HISTORICAL_ORDER_QTY}}</strong> orders, <strong>{{HISTORICAL_CLICK}}</strong> clicks, and <strong>{{ACTIVE_DAYS}}</strong> active days. Tone adapts per tier — encouraging for newcomers, consultative for established. Frames performance positively before the campaign pitch.' },
+    { title: 'Stage 3 — Campaign Pitch', body: 'Pitches <strong>{{CAMPAIGN_NAME}}</strong> running <strong>{{CAMPAIGN_DATE}}</strong> with tier-specific hooks. Newcomers: "great way to earn your first bonus." Established: "well positioned for higher tiers." Handles interested, hesitant (free/no-downside convincer), and declined (pivot to tips) responses.' },
+    { title: 'Stage 4a — Open Question: Challenges', body: 'Asks: <strong>"What\'s the biggest challenge you face in growing your affiliate earnings?"</strong> The LLM parses multi-part answers (e.g. "time, product selection, low views") and stores ALL parts for use in Stage 5. Key LLM differentiator — NLP cannot handle free-form complex responses.' },
+    { title: 'Stage 4b — Content & Promotion Strategy', body: 'Asks about platforms and content types. <strong>Cross-turn memory</strong>: if the partner mentioned a platform in 4a, the agent references it here instead of re-asking. e.g. "You mentioned TikTok earlier — do you also post on other platforms?" Demonstrates contextual awareness across turns.' },
+    { title: 'Stage 5 — Personalized Growth Tips', body: 'Delivers exactly <strong>1–2 tips</strong> combining behavioral data (tier + click-to-order diagnostic) with the partner\'s own words from 4a/4b. Every tip references something specific — never generic. e.g. "Since product selection is your challenge, try the trending section during this campaign."' },
+    { title: 'Stage 6 — Closing', body: 'Agent outputs a closing label (<strong>Move to Closing A/B/C/D/E</strong>) — the script plays via Exit Task Waiting Messages. Five outcomes: <strong>A</strong> Registered, <strong>B</strong> Tips Only, <strong>C</strong> Unclassified, <strong>D</strong> Declined, <strong>E</strong> Redirected to Support.' }
+  ];
+  let activeFlow = -1;
+  function showFlowDetail(i) {
+    const el = document.getElementById('flow-detail');
+    if (activeFlow === i) { el.classList.remove('active'); activeFlow = -1; return; }
+    activeFlow = i;
+    el.innerHTML = '<div class="flow-detail-title">' + flowData[i].title + '</div><div class="flow-detail-body">' + flowData[i].body + '</div>';
+    el.classList.add('active');
+  }
+
+  // Dialog tabs
+  function showDialog(type) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('dialog-emerging').style.display = type === 'emerging' ? 'block' : 'none';
+    document.getElementById('dialog-established').style.display = type === 'established' ? 'block' : 'none';
+    const container = document.getElementById('dialog-' + type);
+    container.querySelectorAll('.dialog-turn').forEach(t => {
+      t.style.animation = 'none';
+      t.offsetHeight;
+      t.style.animation = '';
+    });
+  }
+</script>
+</body>
+</html>
