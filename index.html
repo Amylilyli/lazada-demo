@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lazada AFP Growth Coach — Agent Overview</title>
 <style>
-  @font-face { font-family: 'Instrument'; src: url('InstrumentSans-Regular.ttf'); font-weight: 400; }
-  @font-face { font-family: 'Instrument'; src: url('InstrumentSans-Bold.ttf'); font-weight: 700; }
-  @font-face { font-family: 'JetBrains'; src: url('JetBrainsMono-Regular.ttf'); font-weight: 400; }
-  @font-face { font-family: 'JetBrains'; src: url('JetBrainsMono-Bold.ttf'); font-weight: 700; }
-  @font-face { font-family: 'Jura'; src: url('Jura-Light.ttf'); font-weight: 300; }
-  @font-face { font-family: 'Jura'; src: url('Jura-Medium.ttf'); font-weight: 500; }
-
   :root {
     /* Lazada-inspired palette */
     --laz-orange: #f85606;
@@ -52,7 +45,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Instrument', system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     background: var(--bg-page);
     color: var(--text);
     line-height: 1.65;
@@ -66,7 +59,7 @@
     text-align: center;
   }
   .top-banner span {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -110,7 +103,7 @@
     background: var(--laz-orange);
   }
   .hero-badge span {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 1px;
     color: var(--laz-orange);
@@ -118,7 +111,7 @@
     font-weight: 700;
   }
   .hero h1 {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 52px;
     letter-spacing: -1px;
@@ -127,7 +120,7 @@
     line-height: 1.15;
   }
   .hero h1 strong {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--laz-orange);
   }
   .hero-sub {
@@ -143,7 +136,7 @@
     flex-wrap: wrap;
   }
   .hero-tag {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 0.3px;
     padding: 5px 12px;
@@ -173,6 +166,8 @@
     font-weight: 700;
     box-shadow: 0 6px 18px rgba(248,86,6,0.24);
     transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
   }
   .demo-button:hover {
     transform: translateY(-1px);
@@ -244,7 +239,7 @@
     margin-bottom: 24px;
   }
   .section-num {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 13px;
     font-weight: 700;
     color: white;
@@ -263,7 +258,6 @@
     color: var(--text-muted);
     margin-left: auto;
   }
-
 
   /* ── BACKGROUND STORY ── */
   .story-grid {
@@ -284,7 +278,7 @@
     border-color: var(--laz-orange-border);
   }
   .story-eyebrow {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -293,9 +287,9 @@
     margin-bottom: 10px;
   }
   .story-title {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text);
     margin-bottom: 12px;
     line-height: 1.2;
@@ -337,9 +331,9 @@
     gap: 14px;
   }
   .persona-name {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--laz-orange);
   }
   .persona-role {
@@ -354,7 +348,7 @@
     margin-top: 6px;
   }
   .persona-pill {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     padding: 7px 11px;
     border-radius: 99px;
@@ -376,7 +370,7 @@
     box-shadow: var(--shadow-sm);
   }
   .value-num {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     color: var(--laz-orange);
     font-weight: 700;
@@ -408,7 +402,7 @@
   }
   .campaign-info { flex: 1; }
   .campaign-eyebrow {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -416,9 +410,9 @@
     margin-bottom: 8px;
   }
   .campaign-name {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 34px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 6px;
   }
   .campaign-date {
@@ -448,12 +442,12 @@
     min-width: 130px;
   }
   .campaign-stat-val {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
   }
   .campaign-stat-label {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     letter-spacing: 0.8px;
     opacity: 0.8;
@@ -507,7 +501,7 @@
   .cap-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
   .cap-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
   .cap-vs {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     margin-top: 12px;
     padding: 4px 10px;
@@ -555,7 +549,7 @@
     width: 48px; height: 48px;
     border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 15px;
     font-weight: 700;
     color: white;
@@ -576,14 +570,14 @@
     line-height: 1.25;
   }
   .flow-hint {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 10px;
     color: var(--text-dim);
     margin-top: 3px;
     text-align: center;
   }
   .flow-badge {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 10px;
     padding: 2px 7px;
     border-radius: 4px;
@@ -651,7 +645,7 @@
     margin-bottom: 14px;
   }
   .tier-label {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -659,9 +653,9 @@
     margin-bottom: 2px;
   }
   .tier-name {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text);
     margin-bottom: 8px;
   }
@@ -672,7 +666,7 @@
     line-height: 1.4;
   }
   .tier-tone-tag {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     padding: 4px 10px;
     border-radius: 6px;
@@ -709,7 +703,7 @@
     box-shadow: var(--shadow-sm);
   }
   .diag-label {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     letter-spacing: 0.5px;
     color: var(--text-dim);
@@ -742,10 +736,10 @@
   }
   .var-dot { width: 8px; height: 8px; border-radius: 50%; }
   .var-group-title { font-size: 14px; font-weight: 700; color: var(--text); }
-  .var-count { font-family: 'JetBrains', monospace; font-size: 11px; color: var(--text-dim); margin-left: auto; }
+  .var-count { font-family: 'Monaco', 'Courier New', monospace; font-size: 11px; color: var(--text-dim); margin-left: auto; }
   .var-chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .var-chip {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 6px;
@@ -765,7 +759,7 @@
     background: var(--text);
     border-radius: 8px;
     padding: 7px 12px;
-    font-family: 'Instrument', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 12px;
     color: white;
     white-space: nowrap;
@@ -811,7 +805,7 @@
   }
   .acw-dot { width: 8px; height: 8px; border-radius: 50%; }
   .acw-tag {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     padding: 6px 11px;
     border-radius: 7px;
@@ -822,7 +816,7 @@
   .at-purple { background: var(--laz-purple-light); color: var(--laz-purple); border: 1px solid var(--laz-purple-border); }
   .at-amber { background: var(--laz-amber-light); color: #b45309; border: 1px solid var(--laz-amber-border); }
   .acw-llm-badge {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -856,7 +850,7 @@
   }
   .safety-items { display: flex; flex-wrap: wrap; gap: 8px; }
   .safety-badge {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     padding: 7px 14px;
     border-radius: 8px;
@@ -875,6 +869,7 @@
     color: white;
     cursor: default;
     transition: transform 0.2s;
+    border: none;
   }
   .closing-badge:hover { transform: scale(1.04); }
 
@@ -885,7 +880,7 @@
     margin-bottom: 16px;
   }
   .tab-btn {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 0.3px;
     padding: 8px 18px;
@@ -942,7 +937,7 @@
   .avatar-partner { background: var(--laz-blue); }
   .dialog-content { flex: 1; }
   .dialog-speaker {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 11px;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -962,7 +957,7 @@
   }
   .dialog-text em { color: var(--laz-orange); font-style: normal; font-weight: 700; }
   .dialog-stage {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 10px;
     color: var(--text-dim);
     margin-top: 5px;
@@ -988,13 +983,13 @@
     background: var(--laz-orange);
   }
   .footer-logo span {
-    font-family: 'Jura', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
   }
   .footer-text {
-    font-family: 'JetBrains', monospace;
+    font-family: 'Monaco', 'Courier New', monospace;
     font-size: 12px;
     color: var(--text-dim);
     letter-spacing: 0.5px;
@@ -1022,7 +1017,7 @@
         <span class="hero-tag">Real-time Analytics</span>
       </div>
       <div class="hero-actions">
-        <a href="#" class="demo-button">Launch Demo →</a>
+        <button class="demo-button">Launch Demo →</button>
       </div>
     </div>
     <div class="hero-visual">
@@ -1525,7 +1520,6 @@
     node.addEventListener('click', () => {
       const detail = document.querySelector('.flow-detail');
       detail.classList.add('active');
-      // You could rotate through different details here
     });
   });
 
